@@ -9,3 +9,5 @@ response = requests.get(f"https://api.openweathermap.org/data/2.5/weather?q={cit
 
 if response.status_code == 200:
     print(response.json()["main"]["temp"])
+else:
+    print(f"fetch data failed. ex: {response.status_code}")
